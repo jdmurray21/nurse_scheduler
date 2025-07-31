@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.header p {
+  font-size: 1.1em;
+  color: #6c757d;
+  margin: 0;
+}
+
+.schedule-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  max-width: 100%;
+}
+
+
+
+.schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1200px;
+  border-radius: 8px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 16px 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.schedule-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  line-height: 1.4;
+  min-width: 80px;
+}
+
+
+
+/* Week separator styles */
+.week-separator {
+  border-right: 3px solid #007bff !important;
+  background-color: #f8f9ff !important;
+}
+
+.week-separator-data {
+  border-right: 3px solid #007bff !important;
+  background-color: #f8f9ff !important;
+}
+
+/* Date header content styles */
+.date-day {
+  font-weight: 600;
+  font-size: 13px;
+  color: #495057;
+  margin-bottom: 4px;
+}
+
+.date-number {
+  font-weight: 700;
+  font-size: 14px;
+  color: #212529;
+  margin-bottom: 6px;
+}
+
+.date-staff-count {
+  font-size: 11px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.staff-row {
+  background-color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.staff-row:hover {
+  background-color: #f8f9fa;
+}
+
+
+
+/* Simple, direct sticky column implementation */
+.schedule-table th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: #f8f9fa;
+  min-width: 200px;
+}
+
+.schedule-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: white;
+  min-width: 200px;
+}
+
+.staff-row:hover td:first-child {
+  background: #f8f9fa;
+}
+
+
+
+.staff-name {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.fairness-score {
+  color: #6c757d;
+  font-size: 0.85em;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.nurse-name-clickable {
+  color: #007bff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.nurse-name-clickable:hover {
+  color: #0056b3;
+}
+
+.shift-cell {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.autobalance-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.autobalance-btn:hover {
+  background-color: #0056b3;
+}
+
+.autobalance-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.revert-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.revert-btn:hover {
+  background-color: #c82333;
+}
+
+.swaps-info {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.swaps-label {
+  color: #6c757d;
+  margin-right: 8px;
+}
+
+.swaps-count {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 20px 0;
+} 

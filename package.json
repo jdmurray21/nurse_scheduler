@@ -1,0 +1,27 @@
+{
+  "name": "nurse-scheduler",
+  "version": "1.0.0",
+  "description": "Nurse scheduling application with autobalance feature",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && PORT=3002 npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["nurse", "scheduler", "autobalance"],
+  "author": "",
+  "license": "MIT"
+} 
