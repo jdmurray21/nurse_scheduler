@@ -58,9 +58,11 @@ function App() {
       setLoading(true);
       console.log('Fetching data from API...');
       
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+      
       const [profilesResponse, preferencesResponse] = await Promise.all([
-        axios.get('/api/profiles'),
-        axios.get('/api/shift-preferences')
+        axios.get(`${API_BASE_URL}/api/profiles`),
+        axios.get(`${API_BASE_URL}/api/shift-preferences`)
       ]);
 
       console.log('Profiles API Response:', profilesResponse.data);

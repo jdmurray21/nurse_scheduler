@@ -4,7 +4,7 @@ const axios = require('axios');
 const config = require('../config');
 
 const app = express();
-const PORT = config.PORT;
+const PORT = process.env.PORT || config.PORT;
 
 app.use(cors());
 app.use(express.json());
