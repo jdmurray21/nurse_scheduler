@@ -73,5 +73,5 @@ The algorithm uses minimal shift swaps to maintain high fairness scores while me
 ## Future Improvements
 
 * Allow user to manually drag and drop shifts in the schedule table (And update fairness/constraint checking properly)
-# Allow user to manually remove shifts from the schedule table
+* Allow user to manually remove shifts from the schedule table
 * Polish the UI (looks okay but not great)
